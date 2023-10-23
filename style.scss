@@ -175,12 +175,6 @@ section {
   }
 }
 
-.rectangle {
-  width: 1200px;
-  height: 430px;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
 
 .table-section {
   background-color: #ffffff;
@@ -195,12 +189,30 @@ section {
   }
 }
 
-.input-group {width: 350px;}
+.input-group {
+  width: 350px;
+}
 
 .btn-section-2 {
   width: 150px;
   height: 50px;
-  border-radius: 10px; 
-padding: 5px;}
+  border-radius: 10px;
+  padding: 5px;
+}
 
-@media (max-width: 992px) {.reverse { flex-direction: column-reverse;}}
+@media (max-width: 992px) {
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+aside {
+  h5 {
+    font-weight: $font-weight-fifth;
+    color: $font-color-primary;
+  }
+}
+
+ol li {font-weight: $font-weight-fourth;
+color: $font-color-primary;}
+ 
