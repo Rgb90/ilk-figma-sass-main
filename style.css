@@ -121,8 +121,8 @@ p {
   right: 10%;
 }
 
-section .col {
-  padding: 0px;
+.rectangle {
+  border-radius: 30px;
 }
 
 .text-link {
@@ -147,20 +147,38 @@ section .col {
   background-color: #ffffff;
   border-radius: 30px;
   padding-top: 3%;
+  display: flex;
+  justify-content: center;
 }
 
-@media (min-width: 992px) {
-  .table-section {
-    width: 1200px;
-    height: 430px;
-  }
+.border-table {
+  border-right: thick silver solid;
+  border-right-width: 1px;
 }
-.input-group {
+
+.border-amount {
   width: 260px;
   height: 60px;
   border-radius: 20px;
+  border: 1px solid;
 }
 
+.border-right {
+  border-right: 1px solid;
+  width: 70px;
+}
+
+.form-control {
+  width: 180px;
+  padding-top: 0px;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .sponsors {
+    padding-left: 25%;
+  }
+}
 .btn-dropdwn {
   width: 158px;
   height: 60px;
@@ -242,5 +260,51 @@ footer button {
   height: 50px;
 }
 footer input {
-  width: 240px;
+  width: 100px;
+}
+
+/* .border-1 {
+  border-top: thick;
+  border-bottom: thick;
+  border-right: thick silver solid;
+  border-left: thick;
+}
+ */
+/* @media (max-width: 768px) {
+
+  .border-2,
+  .border-3 {
+    border-top: thick silver solid;
+  }
+} */
+.border-1 {
+  border-top: thick silver solid;
+  border-bottom: thick silver solid;
+}
+
+@media (min-width: 768px) {
+  .border-2 {
+    border-right: thick silver solid;
+  }
+}
+@media (max-width: 992px) {
+  .border-2 {
+    border-right: thick;
+  }
+}
+@media (max-width: 992px) {
+  .border-2 {
+    border-bottom: thick silver solid;
+  }
+}
+.border-2,
+.border-3 {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  footer .row {
+    display: grid;
+  }
 }/*# sourceMappingURL=style.css.map */
