@@ -8,33 +8,10 @@ $font-weight-sixth: 600;
   font-family: Poppins;
 }
 
-nav {
-  .navbar-brand {
-    font-size: 2rem;
-    font-weight: 800;
-  }
-}
-
-a span {
-  background: var(--GRA-Blue,
-      linear-gradient(137deg, #468ef9 -12.5%, #0c66ee 107.5%));
-  color: #fff;
-  padding: 0px 5px 3px 5px;
-  border-radius: 6px;
-  margin-right: 2px;
-  position: relative;
-  z-index: 0;
-}
-
-.nav-link {
-  font-weight: $font-weight-fifth;
-  color: $font-color-primary;
-
-}
 
 @mixin button {
-  width: 165px;
-  height: 44px;
+  width: 150px;
+  height: 60px;
   border-radius: 40px;
 }
 
@@ -43,10 +20,24 @@ nav .btn {
 }
 
 header .btn {
-  @include button
+  width: 170px;
+  height: 60px;
+  border-radius: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  header .bitcoin-world {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  header .bitcoin-header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
   header .btn {
     width: 100%;
   }
@@ -68,8 +59,8 @@ header h4 {
 
 header {
   h1 {
-    font-weight: 700;
-    font-size: 380%;
+    font-weight: 800;
+    font-size: 4rem;
   }
 }
 
@@ -145,6 +136,7 @@ p {
 
 .rectangle {
   border-radius: 30px;
+  
 }
 
 
@@ -177,6 +169,7 @@ p {
   padding-top: 3%;
   display: flex;
   justify-content: center;
+  margin-top: -100px;
 }
 
 .border-table {
@@ -184,12 +177,21 @@ p {
   border-right-width: 1px;
 }
 
-.border-amount {
+.amount-box{
+  display: flex;
+  border: 1px solid blue;
   width: 260px;
   height: 60px;
   border-radius: 20px;
-  border: 1px solid;
+  padding: 20px 25px;
+
+  input{
+    width: 100%;
+    align-items: end;
+  }
 }
+
+
 
 .border-right {
   border-right: 1px solid;

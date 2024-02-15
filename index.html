@@ -14,31 +14,29 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md">
-    <div class="container">
-      <a href="#" class="navbar-brand"><img class="vector_2" src="asstes/images/icons/Vector 2.png"
-          alt=""><span>N</span><img class="vector_1" src="asstes/images/icons/Vector 1.png" alt="">EFA</a>
-      <img class="d-none d-lg-block star_1" src="asstes/images/icons/Star 1.png" alt="">
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
-        aria-controls="navbar">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container gap-5">
+      <img src="./asstes/images/big-images/logo-nefa.png" alt="logo_nefa" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar-startbootstrap">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 nav-links-container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto gap-4 mb-2 mb-lg-0">
           <li class="nav-item">
-            <a href="#" class="nav-link">Crytocurrency</a>
+            <a class="nav-link active" aria-current="page" href="#">Cryptocurrency</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Exchanges</a>
+            <a class="nav-link" href="#">Exchanges</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Watchlist</a>
+            <a class="nav-link" href="#">Watchlist</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">NFT</a>
+            <a class="nav-link" href="#">NFT</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Portfolio</a>
+            <a class="nav-link" href="#">Portfolio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,24 +46,29 @@
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li>
-                <hr class="dropdown-divider">
+                <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
             </ul>
           </li>
         </ul>
-        <div class="flex-lg-row flex-column d-flex gap-3">
-          <button class="btn btn-outline-primary">Log In</button><button class="btn btn-primary me-lg-3">Sign
-            Up</button>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-primary" type="submit">
+            Log In
+          </button>
+          <button class="btn bg-primary text-white">
+            Sign In
+          </button>
         </div>
       </div>
     </div>
   </nav>
-
   <header class="py-5">
     <div class="container px-5">
       <div class="row align-items-center justifiy-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 bitcoin-header flex-column">
           <img class="star-2 d-none d-lg-block" src="asstes/images/icons/Star 2.svg" alt="">
           <h4 class="mb-3">SIGN UP TODAY</h4>
           <h1 class="mb-5 mb-lg-0">The World’s <br> <span>Fastest Growing</span> <br>Crypto Web App</h1>
@@ -85,16 +88,16 @@
           </div>
           <img class="ellipse_10 d-none d-lg-block" src="asstes/images/icons/Ellipse 10.svg" alt="">
         </div>
-        <div class="col-lg-6">
-          <img class="ellipse_8 d-none d-lg-block" src="asstes/images/icons/Ellipse 8.svg" alt="">
-          <img class="img-fluid 12_1 d-none d-lg-block" src="asstes/images/big-images/12 1.png" alt="">
-          <img class="ellipse_9 d-none d-lg-block" src="asstes/images/icons/Ellipse 9.svg">
+        <div class="col-lg-6 bitcoin-world">
+          <img class="ellipse_8" src="asstes/images/icons/Ellipse 8.svg" alt="">
+          <img class="img-fluid 12_1" src="asstes/images/big-images/12 1.png" alt="">
+          <img class="ellipse_9" src="asstes/images/icons/Ellipse 9.svg">
         </div>
       </div>
     </div>
   </header>
 
-  <section class="container text-center py-5 shadow rectangle justifiy-content-center ">
+  <section class="container py-5 shadow rectangle">
     <div class="row table-section">
       <div class="col-lg-4 mb-5 mb-lg-0 border-table">
         <div class="row justify-content-start">
@@ -247,29 +250,33 @@
 
           <div class="flex-lg-row flex-column d-flex gap-3 flex-sm-row">
             <div class="align-items-center text-end">
-              <button class="btn btn-outline-primary border-amount" placeholder="5,000"><div class="border-right">Amount</div></button>
-          </div>
+              <div class="amount-box" placeholder="5,000">
+                <div class="text"><span>Amount</span></div>
+                <div><input type="text" aria-label="Dollar amount" class="form-control"></div>
+              </div>
+            </div>
             <button class="btn-dropdwn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="img-fluid" src="asstes/images/input-sponsors/Ellipse 13.png" alt=""> USD
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">USD</a></li>
+              <li><a class="dropdown-item" href="#">BTC</a></li>
             </ul>
           </div>
 
           <div class="flex-lg-row flex-column d-flex gap-3 flex-sm-row">
             <div class="align-items-center">
-              <button class="btn border-amount" placeholder="5,000"><div class="border-right">Get</div><input type="text" aria-label="Dollar amount" class="form-control"></button>
-          </div>
+              <div class="amount-box" placeholder="5,000">
+                <div class="text"><span>Get</span></div>
+                <div><input type="text" aria-label="Dollar amount" class="form-control"></div>
+              </div>
+            </div>
             <button class="btn-dropdwn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="img-fluid" src="asstes/images/input-sponsors/image 1 (4).png" alt=""> BTC
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">USD</a></li>
+              <li><a class="dropdown-item" href="#">BTC</a></li>
             </ul>
           </div>
           <button class="btn btn-under-dropdwn btn-primary me-lg-3">Buy Now</button>
