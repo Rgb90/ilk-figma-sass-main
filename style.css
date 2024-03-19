@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * text {
   font-family: Poppins;
 }
@@ -6,6 +7,10 @@ nav .btn {
   width: 150px;
   height: 60px;
   border-radius: 40px;
+}
+
+header {
+  margin-bottom: 20px; /* Header ile section arasına 20 piksel boşluk bırakır */
 }
 
 header .btn {
@@ -18,13 +23,9 @@ header .btn {
   header .bitcoin-world {
     display: none;
   }
-}
-@media (max-width: 992px) {
   header .bitcoin-header {
     text-align: center;
   }
-}
-@media (max-width: 992px) {
   header .btn {
     width: 100%;
   }
@@ -36,7 +37,7 @@ header {
 }
 
 header h4 {
-  background: var(--GRA-Blue, linear-gradient(137deg, #468EF9 -12.5%, #0C66EE 107.5%));
+  background: var(--GRA-Blue, linear-gradient(137deg, #468ef9 -12.5%, #0c66ee 107.5%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,7 +50,7 @@ header h1 {
 }
 
 header span {
-  background: var(--GRA-Blue2, linear-gradient(169deg, #3984F4 -6.01%, #0CD3FF 36.87%, #2F7CF0 78.04%, #0E65E8 103.77%));
+  background: var(--GRA-Blue2, linear-gradient(169deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,69 +59,6 @@ header span {
 p {
   color: #666;
   font-weight: 400;
-}
-
-.vector_1 {
-  position: absolute;
-  top: 37%;
-  left: 170px;
-}
-
-.vector_2 {
-  position: absolute;
-  top: 44%;
-  left: 143px;
-  z-index: 1;
-}
-
-.star-1 {
-  position: absolute;
-  top: 5%;
-  left: 10%;
-}
-
-.star-2 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 30%;
-  left: 36%;
-}
-
-.ellipse_10 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 78%;
-  left: 6%;
-}
-
-.ellipse_8 {
-  width: 27px;
-  height: 27px;
-  position: absolute;
-  top: 20%;
-  right: 43%;
-}
-
-.ellipse_9 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 65%;
-  right: 10%;
-}
-
-.rectangle {
-  border-radius: 30px;
-}
-
-.text-link {
-  padding-left: 160px;
-}
-
-.text-link-3 {
-  padding-left: 90px;
 }
 
 .table th {
@@ -142,11 +80,32 @@ p {
   margin-top: -100px;
 }
 
-.border-table {
-  border-right: thick silver solid;
-  border-right-width: 1px;
+@media (max-width: 1200px) {
+  .border-table {
+    margin-bottom: 20px; /* Tablolar arasına 20 piksel boşluk bırakır */
+    border-right: none;
+  }
+  .table-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
+@media (min-width: 1200px) {
+  .border-table {
+    border-right: 1px solid silver; /* 1200 pikselden büyük ekranlarda sağ taraftaki çizgiyi ekler */
+  }
+  /* Son tabloya çizgi ekleme */
+  .border-table:last-child {
+    border-right: none; /* Son tablonun sağ tarafındaki çizgiyi kaldırır */
+  }
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+  .border-table {
+    width: 90%; /* Tablo genişliğini daraltır */
+    margin: 0 auto 20px auto; /* Tabloyu ortalar ve altına 20 piksel boşluk bırakır */
+  }
+}
 .amount-box {
   display: flex;
   border: 1px solid blue;
@@ -155,14 +114,25 @@ p {
   border-radius: 20px;
   padding: 20px 25px;
 }
-.amount-box input {
-  width: 100%;
-  align-items: end;
+.amount-box .input-form {
+  display: flex;
+  flex: 1; /* input alanının çizgiye yakın olmasını sağlar */
 }
-
-.border-right {
-  border-right: 1px solid;
-  width: 70px;
+.amount-box .input-form input {
+  width: calc(100% - 10px); /* input alanının çizgiye olan mesafesi */
+  border: none; /* varsayılan input çerçevesini kaldırır */
+  outline: none; /* odaklanıldığında kenarlığı kaldırır */
+}
+.amount-box .cizgi {
+  padding-right: 10px;
+  border-right: 1px solid blue;
+  margin-right: 10px; /* çizgi ve input arasındaki boşluk */
+}
+.amount-box .input-form input::-moz-placeholder {
+  text-align: end; /* Placeholder'ların sağa yaslanması için */
+}
+.amount-box .input-form input::placeholder {
+  text-align: end; /* Placeholder'ların sağa yaslanması için */
 }
 
 .form-control {
@@ -171,9 +141,14 @@ p {
   padding-right: 20px;
 }
 
-@media (max-width: 768px) {
+.sponsors {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
   .sponsors {
-    padding-left: 25%;
+    justify-content: center !important;
   }
 }
 .btn-dropdwn {
@@ -202,7 +177,7 @@ aside h5 {
 }
 
 h3 span {
-  background: var(--GRA-Blue2, linear-gradient(169deg, #3984F4 -6.01%, #0CD3FF 36.87%, #2F7CF0 78.04%, #0E65E8 103.77%));
+  background: var(--GRA-Blue2, linear-gradient(169deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -226,7 +201,7 @@ h3 span {
   }
 }
 h5 span {
-  background: var(--GRA-Blue2, linear-gradient(169deg, #3984F4 -6.01%, #0CD3FF 36.87%, #2F7CF0 78.04%, #0E65E8 103.77%));
+  background: var(--GRA-Blue2, linear-gradient(169deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -235,7 +210,7 @@ h5 span {
 .btn-to-top {
   width: 180px;
   height: 60px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   border-radius: 5px;
 }
 
@@ -247,33 +222,22 @@ footer h5 {
   color: #666;
   font-weight: 500;
 }
+
 footer a {
   text-decoration: none;
   color: #666;
   font-weight: 500;
 }
+
 footer input,
 footer button {
   height: 50px;
 }
+
 footer input {
   width: 100px;
 }
 
-/* .border-1 {
-  border-top: thick;
-  border-bottom: thick;
-  border-right: thick silver solid;
-  border-left: thick;
-}
- */
-/* @media (max-width: 768px) {
-
-  .border-2,
-  .border-3 {
-    border-top: thick silver solid;
-  }
-} */
 .border-1 {
   border-top: thick silver solid;
   border-bottom: thick silver solid;
