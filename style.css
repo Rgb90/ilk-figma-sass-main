@@ -61,6 +61,10 @@ p {
   font-weight: 400;
 }
 
+.dropdown {
+  margin-right: 50px;
+}
+
 .table th {
   font-weight: 400;
   color: #666;
@@ -135,12 +139,34 @@ p {
   text-align: end; /* Placeholder'ların sağa yaslanması için */
 }
 
-.form-control {
+/* .form-control {
   width: 180px;
   padding-top: 0px;
   padding-right: 20px;
+} */
+@media (max-width: 576px) {
+  .mini {
+    display: flex; /* Flex düzenini yeniden uygula */
+    flex-wrap: wrap; /* Öğelerin alt alta gelmesini sağla */
+    justify-content: space-between; /* Öğeler arasında boşluk bırak */
+    align-items: center; /* Dikey hizalama */
+  }
+  .get-buton {
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+  .amount-box {
+    flex: 0 0 30%; /* Input alanının genişliğini %30 küçültmek için */
+    /* margin-right: 5px; Öğeler arasında bir boşluk bırakmak için */
+    width: 50%;
+    height: 50%;
+  }
+  .btn-dropdwn {
+    flex: 0 0 50%; /* Butonun genişliğini ayarlamak için */
+    width: 30%;
+    font-size: 0.8rem; /* Butonun yazı boyutunu küçültmek için */
+  }
 }
-
 .sponsors {
   display: flex;
   justify-content: center;

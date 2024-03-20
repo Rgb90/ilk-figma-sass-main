@@ -49,7 +49,10 @@ header {
 }
 
 header h4 {
-  background: var(--GRA-Blue, linear-gradient(137deg, #468ef9 -12.5%, #0c66ee 107.5%));
+  background: var(
+    --GRA-Blue,
+    linear-gradient(137deg, #468ef9 -12.5%, #0c66ee 107.5%)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,7 +65,16 @@ header h1 {
 }
 
 @mixin gradient {
-  background: var(--GRA-Blue2, linear-gradient(169deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%));
+  background: var(
+    --GRA-Blue2,
+    linear-gradient(
+      169deg,
+      #3984f4 -6.01%,
+      #0cd3ff 36.87%,
+      #2f7cf0 78.04%,
+      #0e65e8 103.77%
+    )
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,6 +87,10 @@ header span {
 p {
   color: $font-color-secondary;
   font-weight: $font-weight-fourth;
+}
+
+.dropdown {
+  margin-right: 50px;
 }
 
 .table th {
@@ -157,10 +173,36 @@ p {
   }
 }
 
-.form-control {
+/* .form-control {
   width: 180px;
   padding-top: 0px;
   padding-right: 20px;
+} */
+
+@media (max-width: 576px) {
+  .mini {
+    display: flex; /* Flex düzenini yeniden uygula */
+    flex-wrap: wrap; /* Öğelerin alt alta gelmesini sağla */
+    justify-content: space-between; /* Öğeler arasında boşluk bırak */
+    align-items: center; /* Dikey hizalama */
+  }
+  .get-buton {
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+
+  .amount-box {
+    flex: 0 0 30%; /* Input alanının genişliğini %30 küçültmek için */
+    /* margin-right: 5px; Öğeler arasında bir boşluk bırakmak için */
+    width: 50%;
+    height: 50%;
+  }
+
+  .btn-dropdwn {
+    flex: 0 0 50%; /* Butonun genişliğini ayarlamak için */
+    width: 30%;
+    font-size: 0.8rem; /* Butonun yazı boyutunu küçültmek için */
+  }
 }
 
 .sponsors {
